@@ -1,22 +1,22 @@
 extends ../layouts/default
 
 block content
-  .row
-    .offset1.span5
-      a(href="/auth/facebook")
-        img(src="/assets/img/icons/facebook.png")
-      a(href="/auth/github")
-        img(src="/assets/img/icons/github.png")
-      a(href="/auth/twitter")
-        img(src="/assets/img/icons/twitter.png")
-      a(href="/auth/google")
-        img(src="/assets/img/icons/google.png")
-    .span6
-      if (typeof errors !== 'undefined')
-        .fade.in.alert.alert-block.alert-error
-          a.close(data-dismiss="alert", href="javascript:void(0)") x
-          ul
-            each error in errors
-              li= error.type
+      .row
+        .offset1.span5
+          a(href="/auth/facebook")
+            img(src="/assets/img/icons/facebook.png")
+          a(href="/auth/github")
+            img(src="/assets/img/icons/github.png")
+          a(href="/auth/twitter")
+            img(src="/assets/img/icons/twitter.png")
+          a(href="/auth/google")
+            img(src="/assets/img/icons/google.png")
+        .span6
+          if (typeof errors !== 'undefined' && errors.length > 0)
+            .fade.in.alert.alert-block.alert-error
+              a.close(data-dismiss="alert", href="javascript:void(0)") x
+              ul
+                each error in errors
+                  li= error.type
 
-      block auth
+          block auth
