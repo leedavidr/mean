@@ -1,28 +1,28 @@
 //AngularJS
-script(type='text/javascript', src='/lib/angular/angular.js')
-script(type='text/javascript', src='/lib/angular-cookies/angular-cookies.js')
-script(type='text/javascript', src='/lib/angular-resource/angular-resource.js')
+script(type='text/javascript', src='/assets/lib/angular/angular.js')
+script(type='text/javascript', src='/assets/lib/angular-cookies/angular-cookies.js')
+script(type='text/javascript', src='/assets/lib/angular-resource/angular-resource.js')
 
 //Angular UI
-script(type='text/javascript', src='/lib/angular-bootstrap/ui-bootstrap.js')
-script(type='text/javascript', src='/lib/angular-bootstrap/ui-bootstrap-tpls.js')
-script(type='text/javascript', src='/lib/angular-ui-utils/modules/route/route.js')
+script(type='text/javascript', src='/assets/lib/angular-bootstrap/ui-bootstrap.js')
+script(type='text/javascript', src='/assets/lib/angular-bootstrap/ui-bootstrap-tpls.js')
+script(type='text/javascript', src='/assets/lib/angular-ui-utils/modules/route/route.js')
 
 //Application Init
-script(type='text/javascript', src='/js/app.js')
-script(type='text/javascript', src='/js/config.js')
-script(type='text/javascript', src='/js/directives.js')
-script(type='text/javascript', src='/js/filters.js')
+script(type='text/javascript', src='/core/app.js')
+script(type='text/javascript', src='/core/config.js')
+script(type='text/javascript', src='/core/directives.js')
+script(type='text/javascript', src='/core/filters.js')
 
 //Application Services
-script(type='text/javascript', src='/js/services/global.js')
-script(type='text/javascript', src='/js/services/articles.js')
+script(type='text/javascript', src='/core/globalServices.js')
+script(type='text/javascript', src='/modules/articles/articlesServices.js')
 
 //Application Controllers
-script(type='text/javascript', src='/js/controllers/articles.js')
-script(type='text/javascript', src='/js/controllers/index.js')
-script(type='text/javascript', src='/js/controllers/header.js')	
-script(type='text/javascript', src='/js/init.js')
+script(type='text/javascript', src='/modules/articles/articlesController.js')
+script(type='text/javascript', src='/modules/home/indexController.js')
+script(type='text/javascript', src='/modules/navigation/headerController.js')
+script(type='text/javascript', src='/core/init.js')
 
 if (req.host='localhost')
     //Livereload script rendered 
