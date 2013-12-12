@@ -14,23 +14,23 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'public/lib/angular/angular.js',
-            'public/lib/angular-mocks/angular-mocks.js',
-            'public/lib/angular-cookies/angular-cookies.js',
-            'public/lib/angular-resource/angular-resource.js',
-            'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-            'public/lib/angular-bootstrap/ui-bootstrap.js',
-            'public/lib/angular-ui-utils/modules/route/route.js',
-            'public/js/app.js',
-            'public/js/config.js',
-            'public/js/directives.js',
-            'public/js/filters.js',
-            'public/js/services/global.js',
-            'public/js/services/articles.js',
-            'public/js/controllers/articles.js',
-            'public/js/controllers/index.js',
-            'public/js/controllers/header.js',
-            'public/js/init.js',
+            'public/assets/lib/angular/angular.js',
+            'public/assets/lib/angular-mocks/angular-mocks.js',
+            'public/assets/lib/angular-cookies/angular-cookies.js',
+            'public/assets/lib/angular-resource/angular-resource.js',
+            'public/assets/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+            'public/assets/lib/angular-bootstrap/ui-bootstrap.js',
+            'public/assets/lib/angular-ui-utils/modules/route/route.js',
+            'public/core/app.js',
+            'public/core/config.js',
+            'public/core/directives.js',
+            'public/core/filters.js',
+            'public/core/globalServices.js',
+            'public/modules/articles/articlesServices.js',
+            'public/modules/articles/articlesController.js',
+            'public/modules/home/indexController.js',
+            'public/modules/navigation/headerController.js',
+            'public/core/init.js',
             'test/karma/unit/**/*.js'
         ],
 
@@ -51,8 +51,8 @@ module.exports = function(config) {
             // source files, that you wanna generate coverage for
             // do not include tests or libraries
             // (these files will be instrumented by Istanbul)
-            'public/js/controllers/*.js': ['coverage'],
-            'public/js/services/*.js': ['coverage']
+            //'public/modules/**/*.js': ['coverage'],
+            'public/modules/**/*.js': ['coverage']
         },
 
         coverageReporter: {
@@ -70,7 +70,7 @@ module.exports = function(config) {
 
         // level of logging
         // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-        logLevel: config.LOG_INFO,
+        logLevel: config.LOG_DEBUG,
 
 
         // enable / disable watching file and executing tests whenever any file changes
@@ -94,6 +94,6 @@ module.exports = function(config) {
 
         // Continuous Integration mode
         // if true, it capture browsers, run tests and exit
-        singleRun: false
+        singleRun: true
     });
 };
